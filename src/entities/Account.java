@@ -1,14 +1,15 @@
 package entities;
 
 public class Account {
-    private String number, holder;
+    private String holder;
     private double balance;
+    private int number;
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
@@ -38,10 +39,10 @@ public class Account {
         }
     }
 
-    public Account(String number, String holder, double balance) {
+    public Account(int number, String holder, double balance) {
         this.number = number;
         this.holder = holder;
-        this.balance = balance;
+        addBalance(balance);
     }
 
     @Override

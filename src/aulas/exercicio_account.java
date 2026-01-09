@@ -8,8 +8,9 @@ public class exercicio_account {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Digite o número da conta: ");
-        String number = sc.nextLine();
+        int number = sc.nextInt();
         System.out.print("Digite o nome do proprietário: ");
+        sc.nextLine();
         String name = sc.nextLine();
 
         System.out.print("Deseja fazer um depósito inicial? (S/N) ");
@@ -21,6 +22,7 @@ public class exercicio_account {
             balance = sc.nextDouble();
         }
 
+        // Account account = new Account(number, name, balance);
         Account account = new Account(number, name, balance);
 
         System.out.println("Dados da conta bancária: ");
